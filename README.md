@@ -78,6 +78,22 @@ error rate and p95 latency and acts on the result automatically.
 
 ---
 
+## Screenshots
+
+### Live Traffic Split — the new model serves a controlled slice of traffic
+![Live Traffic Split](docs/live-traffic-split.png)
+
+### Model Comparison — baseline vs canary, head to head (canary error rate flagged in red)
+![Model Comparison](docs/model-comparison.png)
+
+### Deployment History — the health checker flags the canary and auto-rolls-back, no human involved
+![Deployment History](docs/deployment-history.png)
+
+### End-to-end demo — train, deploy, observe, auto-rollback in one run
+![Demo run](docs/demo-terminal.png)
+
+---
+
 ## Services
 
 | Service | URL | Description |
