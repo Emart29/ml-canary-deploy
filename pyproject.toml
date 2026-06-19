@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ml-canary-deploy"
+version = "0.1.0"
+description = "ML model canary deployment with Prometheus-driven automated rollback"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+
+[project.scripts]
+canary = "canary_cli.main:cli"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["core*", "store*", "api*", "integrations*", "canary_cli*", "ui*", "db*"]

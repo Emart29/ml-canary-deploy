@@ -1,0 +1,16 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.git/
+.gitignore
+.env
+*.log
+*.joblib
+*.pkl
+examples/heart_disease/data/
+mlruns/
+.pytest_cache/
+.idea/
+.vscode/
