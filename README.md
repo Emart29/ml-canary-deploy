@@ -11,6 +11,20 @@
 
 Deploy ML model updates to a fraction of traffic, watch Prometheus metrics for both versions, and automatically promote or roll back — no human required.
 
+## The Problem
+
+When you ship a new version of a machine-learning model, it can quietly start making *worse* predictions — and you often don't find out until customers complain or a report looks off. Swapping the old model for the new one all at once is a gamble.
+
+## What This Does
+
+This tool de-risks that swap. Instead of replacing the old model outright, it sends only a small slice of live traffic (say 10%) to the new "canary" model and keeps the rest on the proven one. It continuously compares the two — how often each makes errors and how fast each responds — and then acts on its own:
+
+- if the new model looks **worse**, it **automatically rolls back** to the old one (no human, no 2 a.m. page),
+- if the new model proves **healthy** over enough traffic, it can **automatically promote** it to be the new default,
+- and a live dashboard shows the traffic split, the head-to-head metrics, and the full history of what happened and why.
+
+Think of it as a careful, automatic understudy swap: the new performer only gets the full stage once it's proven it won't drop the ball.
+
 ## Tech Stack
 
 | Layer | Tool |
